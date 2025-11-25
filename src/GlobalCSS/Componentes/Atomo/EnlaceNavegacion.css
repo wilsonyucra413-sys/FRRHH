@@ -1,0 +1,21 @@
+.enlace-navegacion {
+  padding: 1.2rem;
+  display: block;
+  text-decoration: none;
+  color: var(--color-texto-secundario);
+  border-bottom: 2px solid var(--color-borde);
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.enlace-navegacion:hover {
+  background-color: var(--color-superficie);
+  color: var(--color-primario);
+}
+
+.enlace-navegacion.activo {
+  color: var(--color-primario);
+  font-weight: bold;
+  border-right: 4px solid var(--color-primario); /* Indicador visual de activo */
+}

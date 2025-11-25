@@ -1,0 +1,14 @@
+.contenido-pagina {
+  margin-top: 2rem;
+}
+
+.contenido-pagina h1 {
+  font-size: 2rem;
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+}
+
+.contenido-pagina p {
+  font-size: 1.1rem;
+  color: var(--color-texto-secundario);
+}

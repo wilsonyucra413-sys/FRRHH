@@ -1,0 +1,10 @@
+.diseno-principal {
+display: flex;
+  height: 100vh;
+}
+.area-principal {
+  flex-grow: 1; /* Ocupa todo el espacio restante */
+  display: flex;
+  flex-direction: column; /* Apila el contenido y el footer verticalmente */
+  
+}

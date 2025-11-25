@@ -1,0 +1,37 @@
+.logo-contenedor {
+  border: 2px solid var(--color-borde);
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  /* El padding puede hacer que la imagen se vea más pequeña de lo deseado. 
+     Es mejor quitarlo y usar object-fit en la imagen. */
+  /* padding: 15px; */ 
+  transition: border-color 0.3s ease;
+  overflow: hidden; /* Asegura que la imagen no se salga del círculo si no es perfectamente redonda */
+}
+
+.logo-contenedor:hover {
+  border-color: #61DAFB; 
+}
+
+.logo-imagen {
+  width: 100%;
+  height: 100%;
+  /* 'cover' a menudo funciona mejor para llenar completamente el círculo */
+  object-fit: cover; 
+  
+  animation: rotacion-lenta 20s linear infinite;
+}
+
+@keyframes rotacion-lenta {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

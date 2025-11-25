@@ -1,0 +1,56 @@
+/* src/GlobalCSS/Componentes/Organismo/Formulario.css */
+
+.formulario-elegante {
+  max-width: 800px;
+  margin-top: 2rem;
+}
+
+/* --- LA MAGIA DEL LAYOUT GRID --- */
+.grupo-formulario-grid {
+  display: grid;
+  grid-template-columns: 160px 1fr; /* Columna fija para la etiqueta, el resto para el input */
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.label-formulario {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-texto-secundario);
+  text-align: right; /* Alinea la etiqueta a la derecha */
+}
+
+.input-formulario {
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 12px 15px;
+  color: var(--color-texto-principal);
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.input-formulario:focus {
+  border-color: var(--color-primario);
+}
+
+select.input-formulario {
+  appearance: none; /* Quita la flecha por defecto del select */
+}
+
+/* Estilo para el botón principal del formulario */
+.boton-principal {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--color-borde);
+  border: none;
+}
+
+.boton-principal:hover {
+  background-color: #4a4a4a;
+}

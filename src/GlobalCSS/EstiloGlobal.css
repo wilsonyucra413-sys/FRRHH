@@ -1,0 +1,45 @@
+
+/* --- Paleta de Colores Elegante --- */
+:root {
+  --color-fondo: #121212; /* Un negro no tan puro, más suave para la vista */
+  --color-superficie: #1E1E1E; /* Para contenedores como el principal */
+  --color-borde: #333333;
+  --color-texto-principal: #EAEAEA; /* Un blanco no tan brillante */
+  --color-texto-secundario: #A0A0A0;
+  --color-primario: #FFFFFF; /* Acento para elementos activos o importantes */
+}
+
+/* --- Estilos Globales --- */
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto-principal);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+.mensaje-feedback {
+  margin-top: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  animation: fadeIn 0.5s ease;
+}
+.mensaje-feedback.exito {
+  color: #a5d6a7; /* Verde claro */
+  background-color: rgba(76, 175, 80, 0.1);
+}
+.mensaje-feedback.error {
+  color: #ef9a9a; /* Rojo claro */
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

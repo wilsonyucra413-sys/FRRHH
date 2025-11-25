@@ -1,0 +1,52 @@
+.tabla-contenedor {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabla-elegante {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Estilo para la cabecera (thead) */
+.tabla-elegante thead tr {
+  background-color: #2a2a2a; /* Fondo más oscuro para la cabecera */
+}
+
+.tabla-elegante th {
+  padding: 14px 18px; /* Más espaciado */
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-texto-principal);
+  text-transform: capitalize;
+  border-bottom: 2px solid var(--color-borde);
+}
+
+/* Estilo para las celdas del cuerpo (tbody) */
+.tabla-elegante td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-borde);
+  color: var(--color-texto-secundario);
+}
+
+.tabla-elegante tbody tr {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tabla-elegante tbody tr:hover {
+  background-color: #252525;
+}
+
+/* Quitamos el borde de la última fila para un look más limpio */
+.tabla-elegante tbody tr:last-of-type {
+  border-bottom: none;
+}
+
+/* Estilo para el label de carga/error */
+.label-info {
+  margin-top: 2rem;
+  color: var(--color-texto-secundario);
+  font-style: italic;
+}

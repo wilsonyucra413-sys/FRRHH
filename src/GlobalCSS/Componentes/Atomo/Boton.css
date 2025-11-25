@@ -1,0 +1,16 @@
+.boton {
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 8px 18px;
+  color: var(--color-texto-secundario);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.boton:hover {
+  background-color: var(--color-borde);
+  color: var(--color-primario);
+}
