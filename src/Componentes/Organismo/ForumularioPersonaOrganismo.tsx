@@ -3,7 +3,6 @@ from 'react';import { CamposPersona } from '../Moleculas/FormPersonaCampos';
 import type { PersonaDTO } from '../../Types/Persona';
 import { PostPersona } from '../../Servicios/PostPersona';
 import { Boton } from '../Atomos/Boton';
-
 interface FormularioProps {
   onPersonaCreada: () => void;
 }
@@ -19,8 +18,6 @@ export function FormularioPersonaOrganismo({ onPersonaCreada }: FormularioProps)
   const [persona, setPersona] = useState<PersonaDTO>(estadoInicial);
   const [mensaje, setMensaje] = useState<MensajeState>({ texto: '', tipo: null });
 
-  // --- PASO 2: CREAMOS UNA REFERENCIA PARA EL MENSAJE ---
-  // Esta referencia apuntará al párrafo (<p>) del mensaje en el DOM.
   const mensajeRef = useRef<HTMLParagraphElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -40,18 +37,17 @@ export function FormularioPersonaOrganismo({ onPersonaCreada }: FormularioProps)
     }
   };
 
-  // --- PASO 3: CREAMOS EL EFECTO DE DESLIZAMIENTO ---
-  // Este código se ejecutará CADA VEZ que `mensaje.texto` cambie.
+
   useEffect(() => {
-    // Si la referencia existe y el mensaje no está vacío...
+
     if (mensajeRef.current && mensaje.texto) {
-      // ...le decimos al navegador que se deslice suavemente a ese elemento.
+
       mensajeRef.current.scrollIntoView({
-        behavior: 'smooth', // Animación suave
-        block: 'center',    // Centra el elemento en la pantalla
+        behavior: 'smooth',
+        block: 'center',    
       });
     }
-  }, [mensaje.texto]); // La dependencia: se ejecuta solo si el texto del mensaje cambia.
+  }, [mensaje.texto]); 
 
   return (
     <form onSubmit={handleSubmit} className="formulario-elegante">
@@ -59,7 +55,7 @@ export function FormularioPersonaOrganismo({ onPersonaCreada }: FormularioProps)
       <div className="grupo-formulario-grid">
         <span></span> {/* Columna vacía para alinear el botón */}
         <div>
-          <button className="boton boton-principal">Registrar Persona</button>
+          <Boton><button className="boton boton-principal">Registrar Persona</button></Boton>
           
           {/* Añadimos la 'ref' a nuestro párrafo de mensaje */}
           {mensaje.texto && (
